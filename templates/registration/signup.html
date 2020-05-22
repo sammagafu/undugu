@@ -26,30 +26,20 @@
             <div class="col-lg-6 col-12 fxt-bg-color">
                 <div class="fxt-content">                            
                     <div class="fxt-form">                               
-                        <h2>Login</h2>
-                        <p>Login into your pages account</p>
+                        <h2>User Registration</h2>
                         <form method="POST">
                             {% csrf_token %}
                             {{ form|crispy }}
                             <div class="form-group">
-                                <button type="submit" class="fxt-btn-fill">Log in</button>
+                                <button type="submit" class="fxt-btn-fill">Register</button>
                             </div>
-                        </form> 
-                        <div class="form-group">
-                            <div class="fxt-checkbox-area">
-                                <div class="checkbox">
-                                    <input id="checkbox1" type="checkbox">
-                                    <label for="checkbox1">Keep me logged in</label>
-                                </div>
-                                <a href="{% url 'password_reset' %}" class="switcher-text">Forgot Password</a>
-                            </div>
-                        </div>            
+                        </form>           
                     </div> 
                     <div class="fxt-style-line">                               
-                        <h3>Or Login With Email</h3> 
+                        <h3>Login</h3> 
                     </div>
                     <div class="fxt-footer">
-                        <p>Don't have an account?<a href="{% url 'account:signup' %}" class="switcher-text">Register</a></p>
+                        <p>I've have an account?<a href="{% url 'login' %}" class="switcher-text">Login</a></p>
                     </div>                             
                 </div>
             </div>                    
